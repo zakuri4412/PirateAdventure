@@ -10115,6 +10115,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 386866747, guid: 1fe530341b026f745b896f8265526fa1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 670067537509069426}
     - target: {fileID: 5397149759970163168, guid: 1fe530341b026f745b896f8265526fa1, type: 3}
       propertyPath: m_Name
       value: GameOverCanvas

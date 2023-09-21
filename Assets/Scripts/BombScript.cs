@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BombScript : MonoBehaviour
@@ -55,12 +56,12 @@ public class BombScript : MonoBehaviour
                 obj.GetComponent<Rigidbody2D>().AddForce(direction * (force + 1500f));
                 characterController.isBeingHit = true;
             }
-            if (obj.gameObject.name.Contains("Enemy"))
-            {
-                enemyHealth.minusHealth(damage);
-            }
             else
             {
+                if(obj.GetComponent<Enemyhealth>() != null)
+                {
+                    obj.GetComponent<Enemyhealth>().minusHealth(damage);
+                }
                 obj.GetComponent<Rigidbody2D>().AddForce(direction * force);
             }
 
